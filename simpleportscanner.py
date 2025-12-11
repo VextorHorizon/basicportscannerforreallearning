@@ -18,8 +18,9 @@ try:
         result = s.connect_ex((target, port)) #connect to target and port
         if result == 0:
             print(f"[+] Port {port} OPEN")
+
+        s.close()
     
-    sys.exit()
 
 
 except KeyboardInterrupt:
@@ -28,3 +29,4 @@ except KeyboardInterrupt:
 except socket.gaierror:
     print(f"Could not resolve the hostname {target}")
     sys.exit()
+
