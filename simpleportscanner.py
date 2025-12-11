@@ -20,7 +20,8 @@ try:
             print(f"[+] Port {port} OPEN")
 
         s.close()
-    
+        
+    print("Finish scanning")
 
 
 except KeyboardInterrupt:
@@ -29,4 +30,5 @@ except KeyboardInterrupt:
 except socket.gaierror:
     print(f"Could not resolve the hostname {target}")
     sys.exit()
+
 
